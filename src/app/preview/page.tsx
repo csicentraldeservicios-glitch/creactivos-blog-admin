@@ -1,6 +1,84 @@
 import Image from "next/image";
+import Link from "next/link";
 import { APOYO, CONTACTO, EJES, MISION, PROPOSITO, SERVICIOS, VALORES } from "@/lib/site";
-import { NOTICIAS, PORTAFOLIO } from "@/lib/blog-content";
+import { MINAS, NOTICIAS, PORTAFOLIO } from "@/lib/blog-content";
+
+const TILES = [
+  {
+    href: "/preview/minas-de-salento",
+    src: MINAS.imagenes[0],
+    alt: "Cielo estrellado y palma de cera sobre las montañas de Salento",
+    caption: "Minas de Salento",
+    className: "row-span-2",
+    // El afiche trae título y créditos impresos: se muestra solo el cielo y la palma.
+    position: "object-[57%_top]",
+    frame: "absolute inset-x-0 top-0 h-[165%]",
+  },
+  {
+    href: "/preview#quienes-somos",
+    src: "/img/proyector.jpg",
+    alt: "Proyector de películas con dos carretes",
+    caption: "Memoria audiovisual",
+    className: "",
+    position: "object-center",
+    frame: "absolute inset-0",
+  },
+  {
+    href: "/preview/sazon-y-fogon",
+    src: "/img/sazon-logo.jpg",
+    alt: "Logo de la serie Sazón y Fogón",
+    caption: "Sazón y Fogón",
+    className: "",
+    position: "object-center",
+    frame: "absolute inset-0",
+  },
+];
+
+function Hero() {
+  return (
+    <section className="grid items-center gap-8 md:grid-cols-[1fr_1.1fr]">
+      <div className="space-y-5">
+        <p className="text-sm font-semibold uppercase tracking-widest">Asociación CreActivos Audiovisual</p>
+        <h1 className="text-4xl font-bold leading-tight text-black sm:text-5xl">Cine y formación ambiental</h1>
+        <p className="max-w-md text-lg leading-relaxed">
+          Profesionales de la comunicación que desarrollan productos culturales, educativos y socioambientales.
+        </p>
+        <div className="flex flex-wrap gap-3 pt-1">
+          <Link href="/preview/minas-de-salento" className="rounded bg-[#E4162B] px-5 py-2 font-semibold text-black">
+            Conoce Minas de Salento
+          </Link>
+          <Link href="/preview/sazon-y-fogon" className="rounded border-2 border-black px-5 py-2 font-semibold text-black">
+            Ver Sazón y Fogón
+          </Link>
+        </div>
+      </div>
+
+      <div className="grid h-[22rem] grid-cols-2 grid-rows-2 gap-2 sm:h-[28rem]">
+        {TILES.map((t) => (
+          <Link
+            key={t.caption}
+            href={t.href}
+            className={`group relative overflow-hidden rounded-lg bg-zinc-900 ${t.className}`}
+          >
+            <div className={t.frame}>
+              <Image
+                src={t.src}
+                alt={t.alt}
+                fill
+                sizes="(min-width: 768px) 25vw, 50vw"
+                className={`object-cover ${t.position} transition-transform duration-500 group-hover:scale-105`}
+                priority
+              />
+            </div>
+            <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2 pt-8 text-sm font-semibold text-white">
+              {t.caption}
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 function H2({ children }: { children: React.ReactNode }) {
   return <h2 className="text-3xl font-bold text-black">{children}</h2>;
@@ -9,6 +87,7 @@ function H2({ children }: { children: React.ReactNode }) {
 export default function CreactivosPage() {
   return (
     <main className="mx-auto max-w-5xl space-y-16 px-4 py-10">
+      <Hero />
       <section id="quienes-somos" className="scroll-mt-6 space-y-10">
         <div className="space-y-4">
           <H2>Quiénes somos</H2>
