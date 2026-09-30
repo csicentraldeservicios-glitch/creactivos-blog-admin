@@ -1,0 +1,43 @@
+import Image from "next/image";
+import Link from "next/link";
+import { MENU } from "@/lib/site";
+
+export function PreviewShell({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="min-h-screen bg-white text-zinc-900">
+      <div className="bg-amber-100 px-4 py-1.5 text-center text-xs text-amber-900">
+        Vista previa · los textos marcados como «ejemplo» son provisionales
+      </div>
+      <header className="border-b-4 border-[#E4162B]">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-4 py-3">
+          <Link href="/preview" aria-label="Creactivos, inicio">
+            <Image src="/logo.jpg" alt="Creactivos" width={140} height={104} priority />
+          </Link>
+          <nav className="flex items-center gap-6 text-lg font-semibold">
+            {MENU.map((item) => (
+              <div key={item.label} className="group relative">
+                <Link href={item.href} className="py-2 hover:text-[#E4162B]">
+                  {item.label}
+                  {"children" in item && " ▾"}
+                </Link>
+                {"children" in item && (
+                  <div className="invisible absolute left-0 top-full z-10 min-w-44 rounded border border-zinc-200 bg-white py-1 text-base font-normal shadow-lg group-focus-within:visible group-hover:visible">
+                    {item.children.map((c) => (
+                      <Link key={c.label} href={c.href} className="block px-4 py-2 hover:bg-zinc-100">
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
+        </div>
+      </header>
+      {children}
+      <footer className="mt-16 bg-black py-6 text-center text-sm text-zinc-300">
+        © Creactivos · Cine y formación ambiental
+      </footer>
+    </div>
+  );
+}
