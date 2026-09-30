@@ -80,6 +80,38 @@ function Hero() {
   );
 }
 
+const GALERIA = [
+  { src: "/img/galeria-musicos.jpg", alt: "Músicos con violín y guitarras bajo un árbol grande", span: "md:col-span-4", position: "object-[50%_30%]" },
+  { src: "/img/galeria-bellotas.jpg", alt: "Bellotas verdes sobre hojarasca", span: "md:col-span-2", position: "object-center" },
+  { src: "/img/galeria-flor.jpg", alt: "Flor naranja de pétalos tubulares", span: "md:col-span-2", position: "object-center" },
+  { src: "/img/galeria-rosa.jpg", alt: "Rosa roja con gotas de lluvia entre la niebla", span: "md:col-span-2", position: "object-center" },
+  { src: "/img/galeria-paramo.jpg", alt: "Laguna de páramo entre montañas y niebla", span: "md:col-span-2", position: "object-center" },
+];
+
+function Galeria() {
+  return (
+    <section id="galeria" className="scroll-mt-6 space-y-4">
+      <h2 className="text-3xl font-bold text-black">Galería</h2>
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-6">
+        {GALERIA.map((g, i) => (
+          <div
+            key={g.src}
+            className={`relative h-44 overflow-hidden rounded-lg bg-zinc-100 sm:h-56 ${g.span} ${i === 0 ? "col-span-2" : ""}`}
+          >
+            <Image
+              src={g.src}
+              alt={g.alt}
+              fill
+              sizes={i === 0 ? "(min-width: 768px) 66vw, 100vw" : "(min-width: 768px) 33vw, 50vw"}
+              className={`object-cover ${g.position}`}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function H2({ children }: { children: React.ReactNode }) {
   return <h2 className="text-3xl font-bold text-black">{children}</h2>;
 }
@@ -160,6 +192,8 @@ export default function CreactivosPage() {
           ))}
         </div>
       </section>
+
+      <Galeria />
 
       <section id="noticias" className="scroll-mt-6 space-y-4">
         <H2>Noticias</H2>

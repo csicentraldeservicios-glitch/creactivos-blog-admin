@@ -11,6 +11,7 @@ export const MENU = [
     href: "/preview",
     children: [
       { label: "Quiénes somos", href: "/preview#quienes-somos" },
+      { label: "Galería", href: "/preview#galeria" },
       { label: "Noticias", href: "/preview#noticias" },
       { label: "CreA Cine Infantil", href: "/preview/crea-cine-infantil" },
       { label: "Minas de Salento", href: "/preview/minas-de-salento" },
