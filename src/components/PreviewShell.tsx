@@ -4,8 +4,8 @@ import { MENU } from "@/lib/site";
 
 export function PreviewShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-white text-zinc-900">
-      <div className="bg-amber-100 px-4 py-1.5 text-center text-xs text-amber-900">
+    <div className="min-h-screen bg-white text-black">
+      <div className="bg-amber-100 px-4 py-1.5 text-center text-xs text-black">
         Vista previa · «ejemplo» y «por definir» son provisionales
       </div>
       <header className="border-b-4 border-[#E4162B]">
@@ -16,7 +16,7 @@ export function PreviewShell({ children }: { children: React.ReactNode }) {
           <nav className="flex items-center gap-6 text-lg font-semibold">
             {MENU.map((item) => (
               <div key={item.label} className="group relative">
-                <Link href={item.href} className="py-2 hover:text-[#E4162B]">
+                <Link href={item.href} className="py-2 hover:underline">
                   {item.label}
                   {"children" in item && " ▾"}
                 </Link>
@@ -35,7 +35,7 @@ export function PreviewShell({ children }: { children: React.ReactNode }) {
         </div>
       </header>
       {children}
-      <footer className="mt-16 bg-black py-6 text-center text-sm text-zinc-300">
+      <footer className="mt-16 border-t-4 border-[#E4162B] py-6 text-center text-sm text-black">
         © Creactivos · Cine y formación ambiental
       </footer>
     </div>

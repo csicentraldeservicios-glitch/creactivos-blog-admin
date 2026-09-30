@@ -7,14 +7,14 @@ export default function SazonPage() {
       <div className="grid items-center gap-6 md:grid-cols-[220px_1fr]">
         <Image src="/img/sazon-logo.jpg" alt="Sazón y Fogón" width={471} height={384} className="h-auto w-full rounded-lg" priority />
         <div className="space-y-3">
-          <h1 className="text-4xl font-bold text-[#E4162B]">Sazón y Fogón</h1>
+          <h1 className="text-4xl font-bold text-black">Sazón y Fogón</h1>
           <p className="text-lg">{SAZON.descripcion}</p>
           <p><b>Impacto:</b> {SAZON.impacto}</p>
         </div>
       </div>
 
-      <div className="relative aspect-video overflow-hidden rounded-lg bg-zinc-900">
-        <p className="absolute inset-0 grid place-items-center text-zinc-400">
+      <div className="relative aspect-video overflow-hidden rounded-lg bg-zinc-100">
+        <p className="absolute inset-0 grid place-items-center text-black">
           Cargando lista de reproducción…
         </p>
         <iframe
@@ -30,7 +30,7 @@ export default function SazonPage() {
         href={PLAYLIST_URL}
         target="_blank"
         rel="noreferrer"
-        className="inline-block rounded bg-[#E4162B] px-5 py-2 font-semibold text-white"
+        className="inline-block rounded bg-[#E4162B] px-5 py-2 font-semibold text-black"
       >
         Ver la lista completa en YouTube
       </a>

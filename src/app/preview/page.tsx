@@ -8,7 +8,7 @@ const NEWS = [
 ];
 
 function H2({ children }: { children: React.ReactNode }) {
-  return <h2 className="text-3xl font-bold text-[#E4162B]">{children}</h2>;
+  return <h2 className="text-3xl font-bold text-black">{children}</h2>;
 }
 
 export default function CreactivosPage() {
@@ -19,7 +19,7 @@ export default function CreactivosPage() {
           <H2>Quiénes somos</H2>
           <ul className="flex flex-wrap gap-2">
             {EJES.map((e) => (
-              <li key={e} className="rounded-full bg-black px-4 py-1 text-sm font-semibold text-white">
+              <li key={e} className="rounded-full border-2 border-black px-4 py-1 text-sm font-semibold text-black">
                 {e}
               </li>
             ))}
@@ -40,7 +40,7 @@ export default function CreactivosPage() {
           {VALORES.map((v) => (
             <div key={v.titulo} className="rounded-lg border-l-4 border-[#E4162B] bg-zinc-50 p-4">
               <h3 className="font-bold">{v.titulo}</h3>
-              <p className="mt-1 text-sm leading-relaxed text-zinc-700">{v.texto}</p>
+              <p className="mt-1 text-sm leading-relaxed text-black">{v.texto}</p>
             </div>
           ))}
         </div>
@@ -51,7 +51,7 @@ export default function CreactivosPage() {
             <article key={s.titulo} className="grid gap-4 rounded-lg border border-zinc-200 p-5 md:grid-cols-[1fr_260px]">
               <div className="space-y-2">
                 <h4 className="text-xl font-bold">
-                  <span className="text-[#E4162B]">{i + 1}.</span> {s.titulo}
+                  <span>{i + 1}.</span> {s.titulo}
                 </h4>
                 <p>{s.descripcion}</p>
                 {s.ejemplo && <p><b>Ejemplo emblemático:</b> {s.ejemplo}</p>}
@@ -76,7 +76,7 @@ export default function CreactivosPage() {
         <ul className="grid gap-4 sm:grid-cols-3">
           {NEWS.map((n, i) => (
             <li key={i} className="rounded-lg border border-zinc-200 p-4 shadow-sm">
-              <p className="text-xs text-zinc-500">{n.date}</p>
+              <p className="text-xs text-black">{n.date}</p>
               <p className="mt-1 font-semibold">{n.title}</p>
             </li>
           ))}
@@ -86,9 +86,9 @@ export default function CreactivosPage() {
       <section id="contacto" className="scroll-mt-6 space-y-3">
         <H2>Contacto</H2>
         <ul className="space-y-1 text-lg">
-          <li>Correo: <span className="text-zinc-500">por definir</span></li>
-          <li>Teléfono / WhatsApp: <span className="text-zinc-500">por definir</span></li>
-          <li>Ciudad: <span className="text-zinc-500">por definir</span></li>
+          <li>Correo: <span>por definir</span></li>
+          <li>Teléfono / WhatsApp: <span>por definir</span></li>
+          <li>Ciudad: <span>por definir</span></li>
         </ul>
       </section>
     </main>
