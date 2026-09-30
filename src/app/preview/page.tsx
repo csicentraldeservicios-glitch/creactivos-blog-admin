@@ -83,9 +83,12 @@ function Hero() {
 const GALERIA = [
   { src: "/img/galeria-musicos.jpg", alt: "Músicos con violín y guitarras bajo un árbol grande", span: "md:col-span-4", position: "object-[50%_30%]" },
   { src: "/img/galeria-bellotas.jpg", alt: "Bellotas verdes sobre hojarasca", span: "md:col-span-2", position: "object-center" },
+  { src: "/img/sazon-cocinera.jpg", alt: "Cocinera con pañoleta rosada sostiene una bandeja de masa en bolitas", span: "md:col-span-2", position: "object-[50%_25%]" },
+  { src: "/img/sazon-empanadas.jpg", alt: "Empanadas fritas alrededor de un pocillo de barro con ají verde", span: "md:col-span-2", position: "object-center" },
+  { src: "/img/galeria-paramo.jpg", alt: "Laguna de páramo entre montañas y niebla", span: "md:col-span-2", position: "object-center" },
+  { src: "/img/sazon-abuela.jpg", alt: "Cocinera mayor con gafas sostiene una cuchara de palo en su cocina", span: "md:col-span-2", position: "object-[30%_30%]" },
   { src: "/img/galeria-flor.jpg", alt: "Flor naranja de pétalos tubulares", span: "md:col-span-2", position: "object-center" },
   { src: "/img/galeria-rosa.jpg", alt: "Rosa roja con gotas de lluvia entre la niebla", span: "md:col-span-2", position: "object-center" },
-  { src: "/img/galeria-paramo.jpg", alt: "Laguna de páramo entre montañas y niebla", span: "md:col-span-2", position: "object-center" },
 ];
 
 function Galeria() {
@@ -96,7 +99,7 @@ function Galeria() {
         {GALERIA.map((g, i) => (
           <div
             key={g.src}
-            className={`relative h-44 overflow-hidden rounded-lg bg-zinc-100 sm:h-56 ${g.span} ${i === 0 ? "col-span-2" : ""}`}
+            className={`relative h-44 overflow-hidden rounded-lg bg-zinc-100 sm:h-56 ${g.span} ${i === 0 || i === GALERIA.length - 1 ? "col-span-2" : ""}`}
           >
             <Image
               src={g.src}
