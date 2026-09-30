@@ -6,12 +6,12 @@ export function PreviewShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-white text-zinc-900">
       <div className="bg-amber-100 px-4 py-1.5 text-center text-xs text-amber-900">
-        Vista previa · los textos marcados como «ejemplo» son provisionales
+        Vista previa · «ejemplo» y «por definir» son provisionales
       </div>
       <header className="border-b-4 border-[#E4162B]">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-4 py-3">
           <Link href="/preview" aria-label="Creactivos, inicio">
-            <Image src="/logo.jpg" alt="Creactivos" width={140} height={104} priority />
+            <Image src="/img/logo.jpg" alt="Creactivos" width={140} height={104} priority />
           </Link>
           <nav className="flex items-center gap-6 text-lg font-semibold">
             {MENU.map((item) => (
