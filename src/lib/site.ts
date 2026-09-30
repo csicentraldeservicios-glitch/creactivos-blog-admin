@@ -109,3 +109,8 @@ export const CONTACTO = {
   facebook: "https://www.facebook.com/CreActivosAudiovisual",
   youtube: "https://www.youtube.com/@CreActivosAudiovisual",
 };
+
+export const APOYO = {
+  buymeacoffee: "https://buymeacoffee.com/creactivos",
+  patreon: "https://www.patreon.com/CreActivos",
+};

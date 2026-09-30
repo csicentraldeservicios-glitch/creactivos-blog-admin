@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CONTACTO, MENU } from "@/lib/site";
+import { APOYO, CONTACTO, MENU } from "@/lib/site";
 
 export function PreviewShell({ children }: { children: React.ReactNode }) {
   return (
@@ -41,6 +41,8 @@ export function PreviewShell({ children }: { children: React.ReactNode }) {
           <a href={CONTACTO.facebook} target="_blank" rel="noreferrer" className="underline">Facebook</a>
           <a href={CONTACTO.youtube} target="_blank" rel="noreferrer" className="underline">YouTube</a>
           <a href={`mailto:${CONTACTO.email}`} className="underline">E-mail</a>
+          <a href={APOYO.buymeacoffee} target="_blank" rel="noreferrer" className="underline">Buy Me a Coffee</a>
+          <a href={APOYO.patreon} target="_blank" rel="noreferrer" className="underline">Patreon</a>
         </p>
       </footer>
     </div>

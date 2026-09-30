@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CONTACTO, EJES, MISION, PROPOSITO, SERVICIOS, VALORES } from "@/lib/site";
+import { APOYO, CONTACTO, EJES, MISION, PROPOSITO, SERVICIOS, VALORES } from "@/lib/site";
 
 const NEWS = [
   { title: "Título de noticia (ejemplo)", date: "Fecha por definir" },
@@ -106,6 +106,25 @@ export default function CreactivosPage() {
           </li>
           <li><b>Ciudad:</b> por definir</li>
         </ul>
+        <div className="space-y-3 pt-6">
+          <h3 className="text-xl font-bold">Si quieres apoyar nuestros proyectos</h3>
+          <div className="flex flex-wrap gap-3">
+            {[
+              ["Buy Me a Coffee", APOYO.buymeacoffee],
+              ["Patreon", APOYO.patreon],
+            ].map(([label, href]) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded bg-[#E4162B] px-5 py-2 font-semibold text-black"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
       </section>
     </main>
   );
