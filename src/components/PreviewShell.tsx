@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MENU } from "@/lib/site";
+import { CONTACTO, MENU } from "@/lib/site";
 
 export function PreviewShell({ children }: { children: React.ReactNode }) {
   return (
@@ -36,7 +36,12 @@ export function PreviewShell({ children }: { children: React.ReactNode }) {
       </header>
       {children}
       <footer className="mt-16 border-t-4 border-[#E4162B] py-6 text-center text-sm text-black">
-        © Creactivos · Cine y formación ambiental
+        <p>© Creactivos · Cine y formación ambiental</p>
+        <p className="mt-2 space-x-4">
+          <a href={CONTACTO.facebook} target="_blank" rel="noreferrer" className="underline">Facebook</a>
+          <a href={CONTACTO.youtube} target="_blank" rel="noreferrer" className="underline">YouTube</a>
+          <a href={`mailto:${CONTACTO.email}`} className="underline">E-mail</a>
+        </p>
       </footer>
     </div>
   );

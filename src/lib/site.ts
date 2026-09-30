@@ -100,3 +100,12 @@ export const SAZON = {
   impacto:
     "Promoción de la identidad cultural y activación del turismo local, dando voz a los guardianes de la tradición culinaria.",
 };
+
+export const CONTACTO = {
+  email: "creactivosaudiovisual@gmail.com",
+  telefono: "(057) 3162582914",
+  telefonoTel: "+573162582914",
+  whatsapp: "https://wa.me/573162582914",
+  facebook: "https://www.facebook.com/CreActivosAudiovisual",
+  youtube: "https://www.youtube.com/@CreActivosAudiovisual",
+};

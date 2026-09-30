@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { EJES, MISION, PROPOSITO, SERVICIOS, VALORES } from "@/lib/site";
+import { CONTACTO, EJES, MISION, PROPOSITO, SERVICIOS, VALORES } from "@/lib/site";
 
 const NEWS = [
   { title: "Título de noticia (ejemplo)", date: "Fecha por definir" },
@@ -86,9 +86,25 @@ export default function CreactivosPage() {
       <section id="contacto" className="scroll-mt-6 space-y-3">
         <H2>Contacto</H2>
         <ul className="space-y-1 text-lg">
-          <li>Correo: <span>por definir</span></li>
-          <li>Teléfono / WhatsApp: <span>por definir</span></li>
-          <li>Ciudad: <span>por definir</span></li>
+          <li>
+            <b>E-mail:</b>{" "}
+            <a href={`mailto:${CONTACTO.email}`} className="underline">{CONTACTO.email}</a>
+          </li>
+          <li>
+            <b>Cel:</b>{" "}
+            <a href={`tel:${CONTACTO.telefonoTel}`} className="underline">{CONTACTO.telefono}</a>
+            {" · "}
+            <a href={CONTACTO.whatsapp} target="_blank" rel="noreferrer" className="underline">WhatsApp</a>
+          </li>
+          <li>
+            <b>Facebook:</b>{" "}
+            <a href={CONTACTO.facebook} target="_blank" rel="noreferrer" className="underline">CreActivosAudiovisual</a>
+          </li>
+          <li>
+            <b>YouTube:</b>{" "}
+            <a href={CONTACTO.youtube} target="_blank" rel="noreferrer" className="underline">@CreActivosAudiovisual</a>
+          </li>
+          <li><b>Ciudad:</b> por definir</li>
         </ul>
       </section>
     </main>
