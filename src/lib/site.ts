@@ -12,6 +12,9 @@ export const MENU = [
     children: [
       { label: "Quiénes somos", href: "/preview#quienes-somos" },
       { label: "Noticias", href: "/preview#noticias" },
+      { label: "CreA Cine Infantil", href: "/preview/crea-cine-infantil" },
+      { label: "Minas de Salento", href: "/preview/minas-de-salento" },
+      { label: "Ruta", href: "/preview/ruta" },
       { label: "Contacto", href: "/preview#contacto" },
     ],
   },

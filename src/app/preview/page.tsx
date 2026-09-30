@@ -1,11 +1,6 @@
 import Image from "next/image";
 import { APOYO, CONTACTO, EJES, MISION, PROPOSITO, SERVICIOS, VALORES } from "@/lib/site";
-
-const NEWS = [
-  { title: "Título de noticia (ejemplo)", date: "Fecha por definir" },
-  { title: "Título de noticia (ejemplo)", date: "Fecha por definir" },
-  { title: "Título de noticia (ejemplo)", date: "Fecha por definir" },
-];
+import { NOTICIAS, PORTAFOLIO } from "@/lib/blog-content";
 
 function H2({ children }: { children: React.ReactNode }) {
   return <h2 className="text-3xl font-bold text-black">{children}</h2>;
@@ -45,6 +40,22 @@ export default function CreactivosPage() {
           ))}
         </div>
 
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold">Portafolio</h3>
+          <p className="max-w-3xl leading-relaxed">{PORTAFOLIO.proposito}</p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {PORTAFOLIO.areas.map((a) => (
+              <div key={a.titulo} className="rounded-lg border border-zinc-200 p-4">
+                <h4 className="font-bold">{a.titulo}</h4>
+                <p className="mt-1 text-sm leading-relaxed">{a.texto}</p>
+              </div>
+            ))}
+          </div>
+          <a href={PORTAFOLIO.certificado} target="_blank" rel="noreferrer" className="inline-block underline">
+            Certificado de existencia y representación legal (abril de 2018)
+          </a>
+        </div>
+
         <div className="space-y-6">
           <h3 className="text-2xl font-bold">Qué hacemos</h3>
           {SERVICIOS.map((s, i) => (
@@ -73,11 +84,12 @@ export default function CreactivosPage() {
 
       <section id="noticias" className="scroll-mt-6 space-y-4">
         <H2>Noticias</H2>
-        <ul className="grid gap-4 sm:grid-cols-3">
-          {NEWS.map((n, i) => (
-            <li key={i} className="rounded-lg border border-zinc-200 p-4 shadow-sm">
-              <p className="text-xs text-black">{n.date}</p>
-              <p className="mt-1 font-semibold">{n.title}</p>
+        <ul className="grid gap-4 sm:grid-cols-2">
+          {NOTICIAS.map((n) => (
+            <li key={n.titulo + n.fecha} className="rounded-lg border border-zinc-200 p-4 shadow-sm">
+              <p className="text-xs text-black">{n.fecha}</p>
+              <p className="mt-1 font-semibold">{n.titulo}</p>
+              <p className="mt-2 text-sm leading-relaxed">{n.texto}</p>
             </li>
           ))}
         </ul>
