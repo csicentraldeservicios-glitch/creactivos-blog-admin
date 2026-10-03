@@ -1,9 +1,8 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { go } from "@/lib/http";
 import { SESSION_COOKIE } from "@/lib/auth";
 
-export async function POST(request: NextRequest) {
-  const res = NextResponse.redirect(new URL("/login", request.url), { status: 303 });
+export async function POST() {
+  const res = go("/login");
   res.cookies.delete(SESSION_COOKIE);
   return res;
 }

@@ -13,14 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Creactivos · Admin del blog",
-  description: "Administración de creactivosaudiovisual.blogspot.com",
+  title: { default: "Creactivos Audiovisual", template: "%s · Creactivos Audiovisual" },
+  description:
+    "Cine y formación ambiental. Profesionales de la comunicación que desarrollan productos culturales, educativos y socioambientales.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

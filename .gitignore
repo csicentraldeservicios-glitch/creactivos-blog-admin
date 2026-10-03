@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# datos del sitio en desarrollo (contenido editado y fotos subidas)
+/data/
