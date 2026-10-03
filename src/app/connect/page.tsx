@@ -28,7 +28,7 @@ export default async function ConnectPage({
       <a href="/api/blogger/connect" className="inline-block rounded bg-black px-4 py-2 text-white">
         Conectar con Google
       </a>
-      <p><Link href="/" className="text-sm underline">Volver</Link></p>
+      <p><Link href="/blogger" className="text-sm underline">Volver</Link></p>
     </main>
   );
 }
