@@ -5,7 +5,6 @@ Sitio web de Creactivos con un panel sencillo para actualizar textos, fotos, not
 - **Sitio público**: `/` (portada, quiénes somos, galería, noticias, contacto), `/sazon-y-fogon`, `/crea-cine-infantil`, `/minas-de-salento`, `/ruta`, `/permanencia-esal`.
 - **Panel**: `/admin` (se entra desde `/login` con una contraseña). Un formulario por sección, fotos que se suben o se eligen de una biblioteca, y botón **Guardar cambios**.
 - **Publicación**: pensado para [Railway](RAILWAY.md).
-- **Blogger (opcional)**: el mismo panel puede gestionar las entradas de <https://creactivosaudiovisual.blogspot.com/> en `/blogger`, y `npm run export:blogger` genera HTML para pegar en páginas de Blogger (ver `blogger/LEEME.md`).
 
 ## En tu computador
 

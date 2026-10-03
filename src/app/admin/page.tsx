@@ -31,15 +31,6 @@ export default function AdminHome() {
         ))}
       </ul>
 
-      <section className="mt-10 rounded-lg bg-zinc-50 p-4 text-sm">
-        <h2 className="font-bold">Otras herramientas</h2>
-        <p className="mt-1">
-          <Link href="/blogger" className="underline">
-            Entradas del blog en Blogger
-          </Link>{" "}
-          · para quienes también publican en creactivosaudiovisual.blogspot.com.
-        </p>
-      </section>
     </main>
   );
 }

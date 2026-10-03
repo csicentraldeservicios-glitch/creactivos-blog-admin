@@ -1,4 +1,5 @@
-// Contenido tomado del blog https://creactivosaudiovisual.blogspot.com/ (leído el 30-sep-2026).
+// Textos iniciales de noticias, portafolio, CreA, Minas de Salento, Ruta y Permanencia ESAL.
+// Provienen del blog anterior (creactivosaudiovisual.blogspot.com, leído el 30-sep-2026); ahora se editan desde el panel.
 
 export const PORTAFOLIO = {
   proposito:
@@ -102,12 +103,6 @@ export const MINAS = {
     "Wilson, Felipe y Néstor, tres habitantes de la zona rural de Salento (Quindío), en la región cafetera y de bosques de Colombia, se organizan para resistir la instalación de operaciones mineras de AngloGold Ashanti. Desde la ingeniería forestal, la fotografía, la publicidad, el diseño gráfico y las redes sociales construyen una campaña que pone en el centro el territorio, los alimentos, la vida y el agua, y que expone las consecuencias ambientales y sociales de la megaminería.",
   videoId: "e4zeWTwGewU",
   teaserUrl: "https://youtu.be/ctGa8IBXxuk",
-  imagenes: [
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpXCsA6v4yadrebse_H-ume6i9Di-VTuxu7Hi9zEBgELKxOdDu7nk9PGHJysq8K7kj_ASKHhpo6GOwttuW3mRnUjLAuRzVwpRB6OUKryy806GD88Yc_AihWrIndDKcl_Kr5E33TCzpkh0i/s1600/Poster+low.jpg",
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXA2JRT59onPV1E2OEyRzgcm8MUO2RVGaxkR4h67iaTSQsMcn_FmPUIq0zzQbFxYSUw5Jk9x0R4DKWiwurN_7Qwm-XcSjYiYk7s85t96vVbBsQwNnKckdxU-zgERFJhmbiuCRfZHeVRcHs/s1600/Fotos+Minas+5.jpg",
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5jdzKrhR0lglzjg8koiasscFHKuX41rxa7arl91h7Rscx-dcN5w413317gIfWrDCdpZ8Oyi8Vj7nxl5B4OvAzxjVJLA5lAYEF57oSZdAZNMarSECutu2brCx0ESJcoKxmF2XEmx8MpSCo/s1600/Fotos+Minas+6.jpg",
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhumZao5yqG5qpQ-S6BMDh8jbwRJkAwvnQoLCUoL5tHQg8qWhW3J_fuJ0BoVu5wU9kQMB9WntO1Kk6qaMPZ4zHseauE2PW-VtvSNaHiWIWQroZ-_18GgCXOg70w_O6n2B8ggCPxJaX-iyg5/s1600/Fotos+Minas+7.jpg",
-  ],
 };
 
 export const RUTA = {

@@ -2,7 +2,7 @@ import { A, BTN, BTN_ALT, Text } from "@/components/site/Bits";
 import { Pic } from "@/components/site/Pic";
 import { getContent } from "@/lib/content";
 import type { SiteContent } from "@/lib/content-types";
-import { telHref, whatsappHref } from "@/lib/content-utils";
+import { galleryFullOnMobile, gallerySpan, telHref, whatsappHref } from "@/lib/content-utils";
 
 export const dynamic = "force-dynamic";
 
@@ -179,19 +179,7 @@ function Quienes({ c }: { c: SiteContent["quienes"] }) {
   );
 }
 
-const SPAN: Record<number, string> = { 2: "md:col-span-2", 3: "md:col-span-3", 4: "md:col-span-4", 6: "md:col-span-6" };
-
-/** Ancho de cada foto en pantallas grandes (rejilla de 6 columnas): la primera grande, el resto de a tres,
- *  y la última fila se reparte para que nunca quede un hueco. */
-function desktopSpan(i: number, n: number): number {
-  if (n === 1) return 6;
-  if (i === 0) return 4;
-  if (i === 1) return 2;
-  const m = n - 2; // fotos después de la primera fila
-  const lastRowStart = 2 + Math.floor((m - 1) / 3) * 3;
-  if (i >= lastRowStart) return 6 / (n - lastRowStart);
-  return 2;
-}
+const SPAN = { 2: "md:col-span-2", 3: "md:col-span-3", 4: "md:col-span-4", 6: "md:col-span-6" } as const;
 
 function Galeria({ items }: { items: SiteContent["galeria"]["items"] }) {
   const fotos = items.filter((f) => f.imagen);
@@ -202,9 +190,9 @@ function Galeria({ items }: { items: SiteContent["galeria"]["items"] }) {
       <H2>Galería</H2>
       <div className="grid grid-cols-2 gap-2 md:grid-cols-6">
         {fotos.map((g, i) => {
-          const span = desktopSpan(i, n);
+          const span = gallerySpan(i, n);
           // En móvil: la primera foto a todo el ancho y, si sobra una suelta al final, también.
-          const mobileFull = i === 0 || (i === n - 1 && (n - 1) % 2 === 1);
+          const mobileFull = galleryFullOnMobile(i, n);
           return (
             <div
               key={i}

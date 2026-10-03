@@ -36,7 +36,6 @@ El sitio público y el panel de administración son una sola aplicación. Lo que
 - **Una sola réplica.** El contenido es un archivo en el volumen; no subas el número de réplicas.
 - **Copias de seguridad.** Además de `backups/`, conviene descargar de vez en cuando el contenido (`content.json` y `uploads/`) desde el volumen. Railway permite hacer copias del volumen desde su panel.
 - **Contraseña.** Quien la tenga puede cambiar todo el sitio. Se limita a 8 intentos fallidos cada 10 minutos por conexión.
-- **Entradas de Blogger (opcional).** El panel también puede administrar `creactivosaudiovisual.blogspot.com`; para eso agrega `APP_URL` (la dirección pública), `GOOGLE_CLIENT_ID` y `GOOGLE_CLIENT_SECRET` y sigue el README. Si no las agregas, el resto funciona igual.
 
 ## Probarlo en tu computador
 

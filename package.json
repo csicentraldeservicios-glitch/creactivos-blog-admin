@@ -1,13 +1,12 @@
 {
-  "name": "creactivos-blog-admin",
+  "name": "creactivos-sitio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "export:blogger": "node scripts/export-blogger.mjs"
+    "lint": "eslint"
   },
   "dependencies": {
     "next": "16.3.6",

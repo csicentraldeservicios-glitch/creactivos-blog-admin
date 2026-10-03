@@ -3,7 +3,7 @@
 import "server-only";
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { DEFAULT_CONTENT } from "./content-defaults";
+import { mergeWithDefaults } from "./content-merge";
 import type { SectionKey, SiteContent } from "./content-types";
 
 export function dataDir(): string {
@@ -36,23 +36,8 @@ async function readStored(): Promise<Stored> {
   }
 }
 
-/** Completa con los valores originales lo que falte en lo guardado (campos nuevos de futuras versiones). */
-function fill<T>(def: T, stored: unknown): T {
-  if (Array.isArray(def)) return (Array.isArray(stored) ? stored : def) as T;
-  if (def && typeof def === "object") {
-    const s = stored && typeof stored === "object" && !Array.isArray(stored) ? (stored as Record<string, unknown>) : {};
-    const out: Record<string, unknown> = {};
-    for (const k of Object.keys(def)) out[k] = fill((def as Record<string, unknown>)[k], s[k]);
-    return out as T;
-  }
-  return (typeof stored === typeof def ? stored : def) as T;
-}
-
 export async function getContent(): Promise<SiteContent> {
-  const stored = await readStored();
-  const out = {} as Record<string, unknown>;
-  for (const k of Object.keys(DEFAULT_CONTENT) as SectionKey[]) out[k] = fill(DEFAULT_CONTENT[k], stored[k]);
-  return out as unknown as SiteContent;
+  return mergeWithDefaults(await readStored());
 }
 
 export async function getSection<K extends SectionKey>(key: K): Promise<SiteContent[K]> {

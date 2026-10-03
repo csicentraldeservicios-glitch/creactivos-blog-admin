@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 import { SESSION_COOKIE, isValidSessionToken } from "@/lib/auth";
 import { go } from "@/lib/http";
 
-// El sitio público no necesita sesión. Solo el panel, la conexión con Blogger y sus APIs.
+// El sitio público no necesita sesión. Solo el panel y sus APIs.
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   if (!isValidSessionToken(request.cookies.get(SESSION_COOKIE)?.value)) {
@@ -16,13 +16,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    "/admin/:path*",
-    "/blogger/:path*",
-    "/connect/:path*",
-    "/posts/:path*",
-    "/api/admin/:path*",
-    "/api/posts/:path*",
-    "/api/blogger/:path*",
-  ],
+  matcher: ["/admin/:path*", "/api/admin/:path*"],
 };

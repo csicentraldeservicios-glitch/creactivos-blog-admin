@@ -65,3 +65,22 @@ export function paragraphs(text: string): string[] {
     .map((p) => p.trim())
     .filter(Boolean);
 }
+
+/**
+ * Ancho (en columnas de una rejilla de 6) de cada foto de la galería en pantallas grandes:
+ * la primera grande, el resto de a tres, y la última fila se reparte para no dejar huecos.
+ */
+export function gallerySpan(i: number, n: number): 2 | 3 | 4 | 6 {
+  if (n === 1) return 6;
+  if (i === 0) return 4;
+  if (i === 1) return 2;
+  const m = n - 2; // fotos después de la primera fila
+  const lastRowStart = 2 + Math.floor((m - 1) / 3) * 3;
+  if (i >= lastRowStart) return (6 / (n - lastRowStart)) as 2 | 3 | 6;
+  return 2;
+}
+
+/** En móvil (2 columnas): la primera foto a todo el ancho y, si sobra una suelta al final, también. */
+export function galleryFullOnMobile(i: number, n: number): boolean {
+  return i === 0 || (i === n - 1 && (n - 1) % 2 === 1);
+}
