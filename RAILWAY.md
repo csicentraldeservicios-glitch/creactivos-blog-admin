@@ -9,7 +9,8 @@ El sitio público y el panel de administración son una sola aplicación. Lo que
 
 ## Pasos
 
-1. En Railway: **New Project → Deploy from GitHub repo** y elige `creactivos-blog-admin`, rama `main`.
+1. En Railway: **New Project → Deploy from GitHub repo** y elige el repositorio de este proyecto, rama `main`.
+   Crea un **proyecto nuevo** de Railway para el sitio (no lo agregues como servicio de otro proyecto). Si el repositorio no aparece en la lista, autoriza a Railway a verlo en GitHub: Settings → Applications → Railway → Repository access.
    Railway detecta Next.js solo; `railway.json` ya trae el comando de inicio y la comprobación de salud (`/api/health`).
 2. **Agrega un volumen** (imprescindible): en el servicio, **Settings → Volumes → Add Volume**, ruta de montaje `/data`.
    Sin volumen, lo que edites se borra en cada despliegue (el panel muestra un aviso amarillo si falta).
