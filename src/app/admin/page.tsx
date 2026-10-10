@@ -31,6 +31,16 @@ export default function AdminHome() {
         ))}
       </ul>
 
+
+      <section className="mt-10 rounded-lg bg-zinc-50 p-4 text-sm">
+        <h2 className="font-bold">Blog en Blogger</h2>
+        <p className="mt-1">
+          <Link href="/blogger" className="underline">
+            Administrar las entradas de creactivosaudiovisual.blogspot.com
+          </Link>{" "}
+          · crear, editar, publicar y eliminar entradas. Requiere conectar la cuenta de Google (ver el README).
+        </p>
+      </section>
     </main>
   );
 }

@@ -5,6 +5,7 @@ Sitio web de Creactivos con un panel sencillo para actualizar textos, fotos, not
 - **Sitio público**: `/` (portada, quiénes somos, galería, noticias, contacto), `/sazon-y-fogon`, `/crea-cine-infantil`, `/minas-de-salento`, `/ruta`, `/permanencia-esal`.
 - **Panel**: `/admin` (se entra desde `/login` con una contraseña). Un formulario por sección, fotos que se suben o se eligen de una biblioteca, y botón **Guardar cambios**.
 - **Publicación**: pensado para [Railway](RAILWAY.md).
+- **Blogger (opcional)**: desde `/blogger` se pueden crear, editar, publicar y eliminar las entradas de <https://creactivosaudiovisual.blogspot.com/>. Ver [Conectar Blogger](#conectar-blogger-opcional).
 
 ## En tu computador
 
@@ -33,3 +34,12 @@ Para añadir un campo editable: agrégalo a `content-types.ts`, a los valores in
 - El panel y sus APIs exigen sesión (cookie firmada, 7 días); el sitio público no.
 - Lo que se guarda se reconstruye en el servidor a partir del esquema: enlaces solo `https://`, `mailto:` o rutas del sitio; las fotos se validan por su contenido real (JPG, PNG, WEBP, GIF, máximo 8 MB) y se guardan con nombre aleatorio.
 - Intentos de login limitados por conexión. Nunca subas `.env*` al repositorio.
+
+## Conectar Blogger (opcional)
+
+1. En [Google Cloud](https://console.cloud.google.com/): crea un proyecto y activa **Blogger API v3**.
+2. Crea un **OAuth Client ID** de tipo *Web application*. En *Authorized redirect URIs* agrega `http://localhost:3000/api/blogger/callback` y, para producción, `https://TU-SITIO.up.railway.app/api/blogger/callback`. Si la pantalla de consentimiento está en modo «Testing», agrega tu cuenta de Google como usuario de prueba.
+3. En las variables (`.env.local` o Railway) pon `APP_URL`, `GOOGLE_CLIENT_ID` y `GOOGLE_CLIENT_SECRET`. No las compartas por chat ni las subas al repositorio.
+4. Entra a `/blogger` → **Conexión → Conectar con Google** con la cuenta dueña del blog. Copia el `BLOGGER_REFRESH_TOKEN` que se muestra a las variables y reinicia (en Railway se redespliega solo al guardar la variable).
+
+El Blog ID se resuelve solo a partir de `BLOGGER_BLOG_URL` (o fíjalo con `BLOGGER_BLOG_ID`).

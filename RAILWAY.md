@@ -38,6 +38,10 @@ El sitio público y el panel de administración son una sola aplicación. Lo que
 - **Copias de seguridad.** Además de `backups/`, conviene descargar de vez en cuando el contenido (`content.json` y `uploads/`) desde el volumen. Railway permite hacer copias del volumen desde su panel.
 - **Contraseña.** Quien la tenga puede cambiar todo el sitio. Se limita a 8 intentos fallidos cada 10 minutos por conexión.
 
+## Entradas de Blogger (opcional)
+
+Si también quieres administrar el blog desde el panel: agrega `APP_URL` (la dirección pública del sitio), `GOOGLE_CLIENT_ID` y `GOOGLE_CLIENT_SECRET`, registra `https://TU-SITIO.up.railway.app/api/blogger/callback` como dirección de retorno en Google Cloud y sigue [Conectar Blogger](README.md#conectar-blogger-opcional). El `BLOGGER_REFRESH_TOKEN` que obtengas va también como variable.
+
 ## Probarlo en tu computador
 
 ```bash
