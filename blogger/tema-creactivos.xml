@@ -61,16 +61,25 @@ body{margin:0;background:#fff;color:#000;font:17px/1.6 Geist,system-ui,-apple-sy
 .cr-year{border-bottom:2px solid #E4162B;padding-bottom:.2em}
 .cr-intro{display:grid;grid-template-columns:220px 1fr;gap:1.5em;align-items:center}
 .cr-intro img{width:100%;height:auto;border-radius:8px;display:block}
-.cr-post{border:1px solid #d4d4d8;border-radius:8px;padding:1em;box-shadow:0 1px 2px rgba(0,0,0,.05)}
-.cr-post h3{font-size:1.1em;margin:.2em 0 .4em}.cr-post h3 a{text-decoration:none}.cr-post h3 a:hover{text-decoration:underline}
-.cr-date{font-size:.8em;margin:0!important}
-.cr-excerpt{max-height:8.5em;overflow:hidden;font-size:.95em;position:relative}
-.cr-excerpt:after{content:"";position:absolute;left:0;right:0;bottom:0;height:2.5em;background:linear-gradient(to top,#fff,rgba(255,255,255,0))}
-.cr-excerpt img,.cr-excerpt iframe,.cr-excerpt table{display:none}
-.cr-more{font-weight:700}
-.cr-art{max-width:760px}.cr-art img,.cr-art iframe,.cr-art table{max-width:100%}.cr-art img{height:auto}
-.cr-art .cr-date{margin:0 0 1em!important}
-.cr-pager{display:flex;justify-content:space-between;gap:1em;margin-top:2em;font-weight:700}
+.cr .widget.Blog{margin:0}
+.cr .blog-posts{display:block}
+.index .cr .blog-posts,.archive .cr .blog-posts{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2em}
+.index .cr .date-outer,.archive .cr .date-outer{border:1px solid #d4d4d8;border-radius:8px;padding:1em;box-shadow:0 1px 2px rgba(0,0,0,.05);min-width:0}
+.cr .date-header{font-size:.8em;font-weight:400;margin:0 0 .3em}
+.cr .post-outer{margin:0}
+.cr .post-title{font-size:1.1em;margin:.2em 0 .4em}
+.cr .post-title a{text-decoration:none}.cr .post-title a:hover{text-decoration:underline}
+.index .cr .post-body,.archive .cr .post-body{max-height:8.5em;overflow:hidden;position:relative;font-size:.95em}
+.index .cr .post-body:after,.archive .cr .post-body:after{content:"";position:absolute;left:0;right:0;bottom:0;height:2.5em;background:linear-gradient(to top,#fff,rgba(255,255,255,0))}
+.index .cr .post-body img,.index .cr .post-body iframe,.index .cr .post-body table,.archive .cr .post-body img,.archive .cr .post-body iframe,.archive .cr .post-body table{display:none}
+.item .cr .post-title{font-size:2.2em}
+.item .cr .post,.item .cr .post-body{max-width:760px}
+.item .cr .post-body img,.item .cr .post-body iframe,.item .cr .post-body table{max-width:100%}.item .cr .post-body img{height:auto}
+.cr .post-footer{font-size:.8em;margin-top:.8em;color:#444}
+.index .cr .post-footer,.archive .cr .post-footer,.cr .post-share-buttons,.cr .post-icons{display:none}
+.static_page .cr .post-title,.static_page .cr .date-header,.static_page .cr .post-header,.static_page .cr .post-footer{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.cr .blog-pager{display:flex;justify-content:space-between;gap:1em;margin-top:2em;font-weight:700;overflow:hidden}
+.cr .blog-pager:after,.cr .clear{clear:both}
 .cr-foot{border-top:4px solid #E4162B;padding:24px 16px;font-size:.9em;text-align:center}
 .cr-foot p{margin:0 0 .5em}
 @media(max-width:700px){
@@ -84,7 +93,7 @@ body{margin:0;background:#fff;color:#000;font:17px/1.6 Geist,system-ui,-apple-sy
 }
 ]]></b:skin>
 </head>
-<body>
+<body expr:class='data:blog.pageType'>
 <div class='cr'>
 
 <header class='cr-head'>
@@ -194,47 +203,12 @@ body{margin:0;background:#fff;color:#000;font:17px/1.6 Geist,system-ui,-apple-sy
 </section>
 </b:if>
 
-<b:section class='main' id='main' showaddelement='no'>
-<b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog' version='1' visible='true'>
-<b:includable id='main' var='top'>
-<b:if cond='data:blog.pageType == &quot;item&quot;'>
-<b:loop values='data:posts' var='post'>
-<article class='cr-art'>
-<h1><data:post.title/></h1>
-<b:if cond='data:post.date'><p class='cr-date'><data:post.date/></p></b:if>
-<div class='cr-body'><data:post.body/></div>
-<b:if cond='data:post.labels'><p class='cr-date'>Etiquetas: <b:loop values='data:post.labels' var='label'><a expr:href='data:label.url' rel='tag'><data:label.name/></a> </b:loop></p></b:if>
-<p><a class='cr-more' href='/#noticias'>← Volver a Noticias</a></p>
-</article>
-</b:loop>
-<b:elseif cond='data:blog.pageType == &quot;static_page&quot;'/>
-<b:loop values='data:posts' var='post'>
-<h1 class='cr-sr'><data:post.title/></h1>
-<div class='cr-art-wide'><data:post.body/></div>
-</b:loop>
-<b:else/>
-<section id='noticias'>
-<h2>Noticias</h2>
-<div class='cr-grid2'>
-<b:loop values='data:posts' var='post'>
-<article class='cr-post'>
-<b:if cond='data:post.date'><p class='cr-date'><data:post.date/></p></b:if>
-<h3><a expr:href='data:post.url'><data:post.title/></a></h3>
-<div class='cr-excerpt'><data:post.body/></div>
-<p><a class='cr-more' expr:href='data:post.url'>Leer más →</a></p>
-</article>
-</b:loop>
-</div>
-<b:if cond='data:newerPageUrl or data:olderPageUrl'>
-<nav class='cr-pager'>
-<span><b:if cond='data:newerPageUrl'><a expr:href='data:newerPageUrl'>← Más recientes</a></b:if></span>
-<span><b:if cond='data:olderPageUrl'><a expr:href='data:olderPageUrl'>Más antiguas →</a></b:if></span>
-</nav>
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+<h2 id='noticias'>Noticias</h2>
 </b:if>
-</section>
-</b:if>
-</b:includable>
-</b:widget>
+
+<b:section class='main' id='main' showaddelement='yes'>
+<b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog'/>
 </b:section>
 
 <b:if cond='data:blog.url == data:blog.homepageUrl'>

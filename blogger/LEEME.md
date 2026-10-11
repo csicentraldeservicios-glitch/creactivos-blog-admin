@@ -15,6 +15,8 @@ Si algo sale mal, ahí mismo puedes **Restaurar**. Si prefieres probar sin riesg
 
 **Importante (celular):** **Tema → ⚙ (junto a «Personalizar») → «¿Quieres mostrar la versión para móviles?» → «No. Mostrar plantilla de escritorio en dispositivos móviles» → Guardar.** Si no, en el celular se ve el tema móvil de Blogger y no el nuevo.
 
+> **Versión 2 del tema.** La primera versión dibujaba mal las entradas y las páginas (el área de contenido salía vacía). Esta usa el widget estándar de Blogger. Si ya habías pegado las páginas, **no las repitas: solo reemplaza el tema.**
+
 ## 2. Reemplazar el contenido de las páginas
 En **Páginas**, abre la página con el lápiz, cambia el editor de «Redactar» a **Vista HTML** (icono `<>` arriba a la izquierda), borra todo, pega el archivo y pulsa **Actualizar**.
 
@@ -27,6 +29,11 @@ En **Páginas**, abre la página con el lápiz, cambia el editor de «Redactar»
 | `paginas/sazon-y-fogon.html` | **Nueva** | Crear: título «Sazón y Fogón»; en *Enlace permanente* elige «Personalizado» y escribe `sazon-y-fogon` |
 
 Las páginas «CreActivos NIT» y «Contacto» ya no hacen falta: su contenido está ahora en la portada y el menú no las enlaza. Puedes dejarlas o eliminarlas.
+
+## Si algo no se ve bien
+- **En el editor la página se ve «sin diseño»**: es normal. El editor de Blogger no carga el CSS del tema. Para ver el resultado real, pulsa **Vista previa** o publica y abre la página.
+- **Después de pegar el tema, la página o las Noticias salen vacías**: ve a **Diseño**, en la sección principal pulsa **Añadir un gadget → Entradas del blog** y guarda.
+- **Al guardar el tema aparece un error de XML**: casi siempre es un pegado incompleto. El archivo tiene unas 240 líneas; pulsa Ctrl+Fin en el editor y comprueba que termina en `</html>`.
 
 ## 3. Cómo queda
 - **Portada:** presentación con fotos, quiénes somos, portafolio, qué hacemos y galería (vienen dentro del tema), luego **Noticias** (tus entradas de Blogger, las más recientes primero; cada entrada nueva aparece sola) y contacto.
