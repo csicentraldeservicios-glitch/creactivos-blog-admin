@@ -15,7 +15,7 @@ Si algo sale mal, ahí mismo puedes **Restaurar**. Si prefieres probar sin riesg
 
 **Importante (celular):** **Tema → ⚙ (junto a «Personalizar») → «¿Quieres mostrar la versión para móviles?» → «No. Mostrar plantilla de escritorio en dispositivos móviles» → Guardar.** Si no, en el celular se ve el tema móvil de Blogger y no el nuevo.
 
-> **Versión 2 del tema.** La primera versión dibujaba mal las entradas y las páginas (el área de contenido salía vacía). Esta usa el widget estándar de Blogger. Si ya habías pegado las páginas, **no las repitas: solo reemplaza el tema.**
+> **Versión 3 del tema.** La primera versión dibujaba mal las entradas y las páginas (el área de contenido salía vacía). Esta usa el widget estándar de Blogger y oculta los comentarios y el enlace de suscripción en las páginas fijas. Si ya habías pegado las páginas, **no las repitas: solo reemplaza el tema.**
 
 ## 2. Reemplazar el contenido de las páginas
 En **Páginas**, abre la página con el lápiz, cambia el editor de «Redactar» a **Vista HTML** (icono `<>` arriba a la izquierda), borra todo, pega el archivo y pulsa **Actualizar**.
