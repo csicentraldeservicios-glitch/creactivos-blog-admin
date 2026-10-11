@@ -15,7 +15,7 @@ Si algo sale mal, ahí mismo puedes **Restaurar**. Si prefieres probar sin riesg
 
 **Importante (celular):** **Tema → ⚙ (junto a «Personalizar») → «¿Quieres mostrar la versión para móviles?» → «No. Mostrar plantilla de escritorio en dispositivos móviles» → Guardar.** Si no, en el celular se ve el tema móvil de Blogger y no el nuevo.
 
-> **Versión 3 del tema.** La primera versión dibujaba mal las entradas y las páginas (el área de contenido salía vacía). Esta usa el widget estándar de Blogger y oculta los comentarios y el enlace de suscripción en las páginas fijas. Si ya habías pegado las páginas, **no las repitas: solo reemplaza el tema.**
+> **Versión 4 del tema** (foto nueva de «Memoria audiovisual»). Desde la versión 3, La primera versión dibujaba mal las entradas y las páginas (el área de contenido salía vacía). Esta usa el widget estándar de Blogger y oculta los comentarios y el enlace de suscripción en las páginas fijas. Si ya habías pegado las páginas, **no las repitas: solo reemplaza el tema.**
 
 ## 2. Reemplazar el contenido de las páginas
 En **Páginas**, abre la página con el lápiz, cambia el editor de «Redactar» a **Vista HTML** (icono `<>` arriba a la izquierda), borra todo, pega el archivo y pulsa **Actualizar**.
@@ -43,7 +43,7 @@ Las páginas «CreActivos NIT» y «Contacto» ya no hacen falta: su contenido e
 Se cargan desde el repositorio público `creactivos-blog-admin` de GitHub, a través de jsDelivr, fijadas a una versión. Funcionan mientras ese repositorio siga **público y sin borrarse**.
 Para no depender de él, cuando el sitio esté en Railway haz **Buscar y reemplazar** en el tema y en las páginas:
 
-- buscar: `https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img`
+- buscar: `https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img`
 - reemplazar por: `https://TU-SITIO.up.railway.app/img` (tu dirección real de Railway)
 
 ## Cambiar textos

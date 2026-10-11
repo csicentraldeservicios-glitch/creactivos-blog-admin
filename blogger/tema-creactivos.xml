@@ -85,7 +85,10 @@ body{margin:0;background:#fff;color:#000;font:17px/1.6 Geist,system-ui,-apple-sy
 .cr-foot p{margin:0 0 .5em}
 @media(max-width:700px){
 .cr-hero,.cr-svc,.cr-photos,.cr-grid2,.cr-dl,.cr-intro{grid-template-columns:1fr}
-.cr-tiles{height:22em}
+.cr-tiles{height:auto;grid-template-rows:none}
+.cr-tile{aspect-ratio:1/1}
+.cr-tile.tall{grid-row:auto}
+.cr-tile.wide{grid-column:span 2;order:-1;aspect-ratio:577/437}
 .cr-gallery{grid-template-columns:repeat(2,1fr)}
 .cr-gal,.cr-s3,.cr-s4,.cr-s6{grid-column:span 1;height:11em}
 .cr-gal.cr-full{grid-column:span 2}
@@ -99,7 +102,7 @@ body{margin:0;background:#fff;color:#000;font:17px/1.6 Geist,system-ui,-apple-sy
 
 <header class='cr-head'>
 <div class='cr-wrap'>
-<a class='cr-logo' expr:href='data:blog.homepageUrl'><img src='https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/logo.jpg' alt='Creactivos' width='140' height='104'/></a>
+<a class='cr-logo' expr:href='data:blog.homepageUrl'><img src='https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/logo.jpg' alt='Creactivos' width='140' height='104'/></a>
 
 <nav class="cr-nav" aria-label="Principal">
 <div><a href="/">Creactivos ▾</a>
@@ -130,9 +133,9 @@ body{margin:0;background:#fff;color:#000;font:17px/1.6 Geist,system-ui,-apple-sy
 <p><a class="cr-btn" href="/p/minas-de-salento.html">Conoce Minas de Salento</a><a class="cr-btn alt" href="/p/sazon-y-fogon.html">Ver Sazón y Fogón</a></p>
 </div>
 <div class="cr-tiles">
-<a class="cr-tile tall" href="/p/minas-de-salento.html"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/portada-palma.jpg" alt="Minas de Salento" loading="lazy"/><span>Minas de Salento</span></a>
-<a class="cr-tile" href="/#quienes-somos"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/proyector.jpg" alt="Memoria audiovisual" loading="lazy"/><span>Memoria audiovisual</span></a>
-<a class="cr-tile" href="/p/sazon-y-fogon.html"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/sazon-logo.jpg" alt="Sazón y Fogón" loading="lazy"/><span>Sazón y Fogón</span></a>
+<a class="cr-tile tall" href="/p/minas-de-salento.html"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/portada-palma.jpg" alt="Cielo estrellado y palma de cera sobre las montañas de Salento" loading="lazy"/><span>Minas de Salento</span></a>
+<a class="cr-tile wide" href="/#quienes-somos"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/memoria-audiovisual.jpg" alt="Archivos y memoria: una persona camina por una montaña, con los logos de la Secretaría de Cultura del Valle del Cauca, Mincultura y el Servicio Geológico Colombiano" loading="lazy"/></a>
+<a class="cr-tile" href="/p/sazon-y-fogon.html"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/sazon-logo.jpg" alt="Logo de la serie Sazón y Fogón" loading="lazy"/><span>Sazón y Fogón</span></a>
 </div>
 </section>
 
@@ -172,7 +175,7 @@ body{margin:0;background:#fff;color:#000;font:17px/1.6 Geist,system-ui,-apple-sy
 <p><b>Ejemplo emblemático:</b> Serie «Sazón y Fogón» (rescate del patrimonio gastronómico local para promover la identidad y el turismo).</p>
 
 <p><b>Entregables:</b> Serie o documental, versiones adaptadas para redes sociales y material de apoyo (making of, fotografías).</p>
-</div><div><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/sazon-afiche.png" alt="Producción de series y documentales patrimoniales" loading="lazy"/></div></div>
+</div><div><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/sazon-afiche.png" alt="Producción de series y documentales patrimoniales" loading="lazy"/></div></div>
 <div class="cr-card cr-svc solo"><div>
 <h3>2. Talleres pedagógicos de expresión audiovisual</h3>
 <p>Programas de formación práctica diseñados para empoderar a niños, jóvenes y adultos (en contextos rurales y urbanos), utilizando el lenguaje audiovisual como una herramienta de expresión, reconocimiento identitario y transformación social.</p>
@@ -186,20 +189,20 @@ body{margin:0;background:#fff;color:#000;font:17px/1.6 Geist,system-ui,-apple-sy
 
 <p><b>Diferencial:</b> Combinamos la preservación técnica con el análisis de contenido, convirtiendo archivos inertes en fuentes activas de conocimiento.</p>
 <p><b>Entregables:</b> Archivo digital organizado y respaldado, informe técnico de digitalización y/o un producto audiovisual curado (ej. un minidocumental o exposición virtual) a partir del material rescatado.</p>
-</div><div><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/archivo-filmico.png" alt="Investigación, digitalización y rescate de memoria audiovisual" loading="lazy"/><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/proyector.jpg" alt="" loading="lazy"/></div></div>
+</div><div><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/archivo-filmico.png" alt="Investigación, digitalización y rescate de memoria audiovisual" loading="lazy"/><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/proyector.jpg" alt="" loading="lazy"/></div></div>
 </section>
 
 <section id="galeria">
 <h2>Galería</h2>
 <div class="cr-gallery">
-<div class="cr-gal cr-s4 cr-full"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/galeria-musicos.jpg" alt="Músicos con violín y guitarras bajo un árbol grande" loading="lazy"/></div>
-<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/galeria-bellotas.jpg" alt="Bellotas verdes sobre hojarasca" loading="lazy"/></div>
-<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/sazon-cocinera.jpg" alt="Cocinera con pañoleta rosada sostiene una bandeja de masa en bolitas" loading="lazy"/></div>
-<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/sazon-empanadas.jpg" alt="Empanadas fritas alrededor de un pocillo de barro con ají verde" loading="lazy"/></div>
-<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/galeria-paramo.jpg" alt="Laguna de páramo entre montañas y niebla" loading="lazy"/></div>
-<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/sazon-abuela.jpg" alt="Cocinera mayor con gafas sostiene una cuchara de palo en su cocina" loading="lazy"/></div>
-<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/galeria-flor.jpg" alt="Flor naranja de pétalos tubulares" loading="lazy"/></div>
-<div class="cr-gal cr-s2 cr-full"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@b28a9e381727f5417cd9316288f8be1cab1c12fd/public/img/galeria-rosa.jpg" alt="Rosa roja con gotas de lluvia entre la niebla" loading="lazy"/></div>
+<div class="cr-gal cr-s4 cr-full"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/galeria-musicos.jpg" alt="Músicos con violín y guitarras bajo un árbol grande" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/galeria-bellotas.jpg" alt="Bellotas verdes sobre hojarasca" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/sazon-cocinera.jpg" alt="Cocinera con pañoleta rosada sostiene una bandeja de masa en bolitas" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/sazon-empanadas.jpg" alt="Empanadas fritas alrededor de un pocillo de barro con ají verde" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/galeria-paramo.jpg" alt="Laguna de páramo entre montañas y niebla" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/sazon-abuela.jpg" alt="Cocinera mayor con gafas sostiene una cuchara de palo en su cocina" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/galeria-flor.jpg" alt="Flor naranja de pétalos tubulares" loading="lazy"/></div>
+<div class="cr-gal cr-s2 cr-full"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/galeria-rosa.jpg" alt="Rosa roja con gotas de lluvia entre la niebla" loading="lazy"/></div>
 </div>
 </section>
 </b:if>
