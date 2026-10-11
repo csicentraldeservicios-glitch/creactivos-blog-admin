@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { go } from "@/lib/http";
 import type { NextRequest } from "next/server";
 import { exchangeCode } from "@/lib/blogger";
 
@@ -10,12 +11,12 @@ export async function GET(request: NextRequest) {
   const expected = request.cookies.get("blogger_oauth_state")?.value;
 
   if (!code || !state || state !== expected) {
-    return NextResponse.redirect(new URL("/connect?error=1", request.url));
+    return go("/connect?error=1");
   }
   try {
     const tokens = await exchangeCode(code);
     if (!tokens.refresh_token) {
-      return NextResponse.redirect(new URL("/connect?error=norefresh", request.url));
+      return go("/connect?error=norefresh");
     }
     const res = new NextResponse(
       `<!doctype html><meta charset="utf-8"><title>Blogger conectado</title>
@@ -23,12 +24,12 @@ export async function GET(request: NextRequest) {
 <h1>Blogger conectado</h1>
 <p>Copia este valor en tu <code>.env</code> (o en las variables del hosting) y reinicia la app. No lo compartas.</p>
 <pre style="white-space:pre-wrap;word-break:break-all;background:#f4f4f5;padding:1rem;border-radius:8px">BLOGGER_REFRESH_TOKEN=${tokens.refresh_token}</pre>
-<p><a href="/">Ir al panel</a></p></body>`,
+<p><a href="/blogger">Ir al panel</a></p></body>`,
       { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } },
     );
     res.cookies.delete("blogger_oauth_state");
     return res;
   } catch {
-    return NextResponse.redirect(new URL("/connect?error=exchange", request.url));
+    return go("/connect?error=exchange");
   }
 }

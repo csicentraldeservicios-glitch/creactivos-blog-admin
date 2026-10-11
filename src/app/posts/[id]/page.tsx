@@ -18,7 +18,7 @@ export default async function EditPost({
 
   return (
     <main className="mx-auto max-w-4xl space-y-4 p-6">
-      <Link href="/" className="text-sm underline">← Volver</Link>
+      <Link href="/blogger" className="text-sm underline">← Volver</Link>
       <h1 className="text-2xl font-bold">Editar entrada</h1>
       <p className="text-sm text-zinc-600">
         Estado: {post.status}

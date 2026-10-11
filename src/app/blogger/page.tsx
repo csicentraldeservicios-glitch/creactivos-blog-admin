@@ -31,6 +31,7 @@ export default async function Dashboard({
       <header className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-2xl font-bold">Creactivos Audiovisual · Blog</h1>
         <div className="flex items-center gap-3 text-sm">
+          <Link href="/admin" className="underline">← Panel del sitio</Link>
           <a href={BLOG_URL} target="_blank" rel="noreferrer" className="underline">Ver blog</a>
           <Link href="/connect" className="underline">Conexión</Link>
           <Link href="/posts/new" className="rounded bg-black px-3 py-1.5 text-white">Nueva entrada</Link>

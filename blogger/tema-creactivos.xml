@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' lang='es' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<title><b:if cond='data:blog.url == data:blog.homepageUrl'>Creactivos Audiovisual · Cine y formación ambiental<b:else/><data:blog.pageTitle/></b:if></title>
+<link href='https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;display=swap' rel='stylesheet'/>
+<b:include data='blog' name='all-head-content'/>
+<b:skin><![CDATA[
+/* Creactivos Audiovisual · tema generado a partir del sitio nuevo */
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:#000;font:17px/1.6 Geist,system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+.cr *{box-sizing:border-box}
+.cr a{color:#000}
+.cr img{max-width:100%}
+.cr h1,.cr h2,.cr h3,.cr h4{color:#000;line-height:1.2;margin:0 0 .5em;font-weight:700}
+.cr h1{font-size:2.6em}.cr h2{font-size:1.9em}.cr h3{font-size:1.35em}.cr h4{font-size:1.1em}
+.cr p{margin:0 0 .9em}
+.cr ul{margin:0 0 1em;padding-left:1.3em}
+.cr-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cr-wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+.cr-head{border-bottom:4px solid #E4162B}
+.cr-head .cr-wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px}
+.cr-logo img{display:block;width:140px;height:auto}
+.cr-nav{display:flex;flex-wrap:wrap;align-items:center;gap:0 24px;font-size:1.1em;font-weight:700}
+.cr-nav>div{position:relative}
+.cr-nav a{text-decoration:none;display:block;padding:8px 0}
+.cr-nav a:hover{text-decoration:underline}
+.cr-sub{visibility:hidden;position:absolute;left:0;top:100%;z-index:20;min-width:200px;background:#fff;border:1px solid #d4d4d8;border-radius:6px;box-shadow:0 8px 20px rgba(0,0,0,.12);padding:4px 0;font-weight:400;font-size:.95em}
+.cr-nav>div:hover .cr-sub,.cr-nav>div:focus-within .cr-sub{visibility:visible}
+.cr-sub a{padding:8px 16px}.cr-sub a:hover{background:#f4f4f5;text-decoration:none}
+.cr-main{padding-top:40px;padding-bottom:40px}
+.cr section{margin:0 0 3.5em}
+.cr-eyebrow{font-size:.8em;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin:0 0 .6em}
+.cr-pills{display:flex;flex-wrap:wrap;gap:.5em;list-style:none;padding:0}
+.cr-pills li{border:2px solid #000;border-radius:999px;padding:.1em .9em;font-size:.9em;font-weight:700}
+.cr-btn{display:inline-block;background:#E4162B;color:#000!important;font-weight:700;padding:.5em 1.2em;border-radius:4px;text-decoration:none;margin:0 .5em .5em 0}
+.cr-btn.alt{background:#fff;border:2px solid #000}
+.cr-grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2em}
+.cr-card{border:1px solid #d4d4d8;border-radius:8px;padding:1em;background:#fff}
+.cr-card.red{border-left:4px solid #E4162B;background:#fafafa}
+.cr-card h4{margin-bottom:.3em}.cr-card p{margin:0;font-size:.95em}
+.cr-hero{display:grid;grid-template-columns:1fr 1.1fr;gap:2em;align-items:center}
+.cr-tiles{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;height:26em}
+.cr-tile{position:relative;display:block;overflow:hidden;border-radius:8px;background:#18181b}
+.cr-tile.tall{grid-row:span 2}
+.cr-tile img,.cr-gal img,.cr-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.cr-tile span{position:absolute;left:0;right:0;bottom:0;padding:2em .8em .5em;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);color:#fff;font-weight:700;font-size:.9em}
+.cr-gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.cr-gal{position:relative;overflow:hidden;border-radius:8px;background:#f4f4f5;height:14em;grid-column:span 2}
+.cr-s3{grid-column:span 3}.cr-s4{grid-column:span 4}.cr-s6{grid-column:span 6}
+.cr-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.cr-photo{position:relative;overflow:hidden;border-radius:8px;background:#f4f4f5;height:18em}
+.cr-svc{display:grid;grid-template-columns:1fr 240px;gap:1.2em;margin:0 0 1em}
+.cr-svc.solo{grid-template-columns:1fr}
+.cr-svc img{width:100%;height:auto;border-radius:6px;margin:0 0 .5em;display:block}
+.cr-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;background:#f4f4f5;margin:0 0 1em}
+.cr-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.cr-dl{display:grid;grid-template-columns:9em 1fr;gap:.5em 1.2em;border:1px solid #d4d4d8;border-radius:8px;padding:1em}
+.cr-dl dt{font-weight:700}.cr-dl dd{margin:0}
+.cr-year{border-bottom:2px solid #E4162B;padding-bottom:.2em}
+.cr-intro{display:grid;grid-template-columns:220px 1fr;gap:1.5em;align-items:center}
+.cr-intro img{width:100%;height:auto;border-radius:8px;display:block}
+.cr .widget.Blog{margin:0}
+.cr .blog-posts{display:block}
+.index .cr .blog-posts,.archive .cr .blog-posts{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2em}
+.index .cr .date-outer,.archive .cr .date-outer{border:1px solid #d4d4d8;border-radius:8px;padding:1em;box-shadow:0 1px 2px rgba(0,0,0,.05);min-width:0}
+.cr .date-header{font-size:.8em;font-weight:400;margin:0 0 .3em}
+.cr .post-outer{margin:0}
+.cr .post-title{font-size:1.1em;margin:.2em 0 .4em}
+.cr .post-title a{text-decoration:none}.cr .post-title a:hover{text-decoration:underline}
+.index .cr .post-body,.archive .cr .post-body{max-height:8.5em;overflow:hidden;position:relative;font-size:.95em}
+.index .cr .post-body:after,.archive .cr .post-body:after{content:"";position:absolute;left:0;right:0;bottom:0;height:2.5em;background:linear-gradient(to top,#fff,rgba(255,255,255,0))}
+.index .cr .post-body img,.index .cr .post-body iframe,.index .cr .post-body table,.archive .cr .post-body img,.archive .cr .post-body iframe,.archive .cr .post-body table{display:none}
+.item .cr .post-title{font-size:2.2em}
+.item .cr .post,.item .cr .post-body{max-width:760px}
+.item .cr .post-body img,.item .cr .post-body iframe,.item .cr .post-body table{max-width:100%}.item .cr .post-body img{height:auto}
+.cr .post-footer{font-size:.8em;margin-top:.8em;color:#444}
+.index .cr .post-footer,.archive .cr .post-footer,.cr .post-share-buttons,.cr .post-icons{display:none}
+.static_page .cr .post-title,.static_page .cr .date-header,.static_page .cr .post-header,.static_page .cr .post-footer{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.cr .blog-pager{display:flex;justify-content:space-between;gap:1em;margin-top:2em;font-weight:700;overflow:hidden}
+.cr .blog-pager:after,.cr .clear{clear:both}
+.static_page .cr .comments,.static_page .cr .blog-pager,.cr .blog-feeds{display:none}
+.cr-foot{border-top:4px solid #E4162B;padding:24px 16px;font-size:.9em;text-align:center}
+.cr-foot p{margin:0 0 .5em}
+@media(max-width:700px){
+.cr-hero,.cr-svc,.cr-photos,.cr-grid2,.cr-dl,.cr-intro{grid-template-columns:1fr}
+.cr-tiles{height:auto;grid-template-rows:none}
+.cr-tile{aspect-ratio:1/1}
+.cr-tile.tall{grid-row:auto}
+.cr-tile.wide{grid-column:span 2;order:-1;aspect-ratio:577/437}
+.cr-gallery{grid-template-columns:repeat(2,1fr)}
+.cr-gal,.cr-s3,.cr-s4,.cr-s6{grid-column:span 1;height:11em}
+.cr-gal.cr-full{grid-column:span 2}
+.cr h1{font-size:2em}.cr h2{font-size:1.6em}
+.cr-main{padding-top:24px}
+}
+]]></b:skin>
+</head>
+<body expr:class='data:blog.pageType'>
+<div class='cr'>
+
+<header class='cr-head'>
+<div class='cr-wrap'>
+<a class='cr-logo' expr:href='data:blog.homepageUrl'><img src='https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/logo.jpg' alt='Creactivos' width='140' height='104'/></a>
+
+<nav class="cr-nav" aria-label="Principal">
+<div><a href="/">Creactivos ▾</a>
+<div class="cr-sub">
+<a href="/#quienes-somos">Quiénes somos</a>
+<a href="/#galeria">Galería</a>
+<a href="/#noticias">Noticias</a>
+<a href="/p/crea.html">CreA Cine Infantil</a>
+<a href="/p/minas-de-salento.html">Minas de Salento</a>
+<a href="/p/noticias.html">Ruta</a>
+<a href="/#contacto">Contacto</a>
+</div></div>
+<div><a href="/p/sazon-y-fogon.html">Sazón y Fogón</a></div>
+<div><a href="/p/permanencia-esal.html">Permanencia ESAL</a></div>
+</nav>
+</div>
+</header>
+
+<main class='cr-wrap cr-main'>
+
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+
+<section class="cr-hero">
+<div>
+<p class="cr-eyebrow">Asociación CreActivos Audiovisual</p>
+<h1>Cine y formación ambiental</h1>
+<p>Profesionales de la comunicación que desarrollan productos culturales, educativos y socioambientales.</p>
+<p><a class="cr-btn" href="/p/minas-de-salento.html">Conoce Minas de Salento</a><a class="cr-btn alt" href="/p/sazon-y-fogon.html">Ver Sazón y Fogón</a></p>
+</div>
+<div class="cr-tiles">
+<a class="cr-tile tall" href="/p/minas-de-salento.html"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/portada-palma.jpg" alt="Cielo estrellado y palma de cera sobre las montañas de Salento" loading="lazy"/><span>Minas de Salento</span></a>
+<a class="cr-tile wide" href="/#quienes-somos"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/memoria-audiovisual.jpg" alt="Archivos y memoria: una persona camina por una montaña, con los logos de la Secretaría de Cultura del Valle del Cauca, Mincultura y el Servicio Geológico Colombiano" loading="lazy"/></a>
+<a class="cr-tile" href="/p/sazon-y-fogon.html"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/sazon-logo.jpg" alt="Logo de la serie Sazón y Fogón" loading="lazy"/><span>Sazón y Fogón</span></a>
+</div>
+</section>
+
+<section id="quienes-somos">
+<h2>Quiénes somos</h2>
+<ul class="cr-pills"><li>Patrimonio</li><li>Formación</li><li>Ambiental</li></ul>
+<div class="cr-grid2">
+<div><h3>Nuestro propósito</h3><p>Recuperar la memoria histórica y fortalecer la identidad de las comunidades, empoderándolas para que sean las protagonistas de su propia narrativa, desarrollo social y recuperación cultural.</p></div>
+<div><h3>Nuestra misión</h3><p>Somos un equipo de profesionales de la comunicación que crea productos culturales, educativos y socioambientales. Integramos la enseñanza pedagógica en cada etapa del proceso audiovisual (investigación, preproducción, producción, posproducción, exhibición y distribución), generando herramientas que motivan el reconocimiento y la interconexión comunitaria.</p></div>
+</div>
+<div class="cr-grid2" style="margin-top:1.2em">
+<div class="cr-card red"><h4>Protagonismo de las voces</h4><p>Las personas y sus relatos son el centro de cada proyecto. No hablamos por ellos, amplificamos su propia voz.</p></div>
+<div class="cr-card red"><h4>Rigor con sensibilidad</h4><p>Toda producción nace de una investigación previa sólida y de un manejo ético y respetuoso del patrimonio (material e inmaterial).</p></div>
+<div class="cr-card red"><h4>Conexión en red</h4><p>Creemos en el poder de las alianzas. Visibilizamos y conectamos el esfuerzo de las comunidades con redes más amplias para garantizar impacto y continuidad.</p></div>
+<div class="cr-card red"><h4>Innovación con propósito</h4><p>Adoptamos la tecnología y la innovación no como un fin en sí mismo, sino como herramientas al servicio de la preservación, la formación y la difusión de la memoria.</p></div>
+</div>
+</section>
+
+<section id="portafolio">
+<h2>Portafolio</h2>
+<p>La Asociación CreActivos Audiovisual (NIT 900411102-1) tiene como propósito el desarrollo de expresiones comunicacionales a través del audiovisual, con el fin de propiciar alternativas culturales integrando investigación, preproducción, producción, postproducción, exhibición y distribución.</p>
+<div class="cr-grid2">
+<div class="cr-card"><h4>Experiencia</h4><p>Escritura de proyectos de formación audiovisual, guiones con temática infantil y ambiental, documentales ambientales, programas infantiles, dirección de fotografía, cámara y montaje.</p></div>
+<div class="cr-card"><h4>Proyectos</h4><p>Cursos académicos de guión y realización con temática ambiental e infantil, e investigación de patrimonio fílmico ambiental.</p></div>
+<div class="cr-card"><h4>Diplomados y talleres</h4><p>Diseño y coordinación de diplomados internacionales de Documental Ambiental, Contenidos para Público Infantil y Guión y Escritura Cinematográfica, y del taller práctico de Cine Ambiental Hotspots.</p></div>
+<div class="cr-card"><h4>CreA</h4><p>Talleres pedagógicos de creación audiovisual para estructurar el reconocimiento de identidades, complementar procesos de rescate de memoria histórica, proteger el patrimonio natural de las comunidades y difundir alternativas culturales.</p></div>
+<div class="cr-card"><h4>Realización audiovisual y fotografía</h4><p>Documental, ficción y corporativos.</p></div>
+</div>
+<p style="margin-top:1em"><a href="https://drive.google.com/file/d/1Jm3c6q5W-jy_dSKYWplqykcCle0ztfT4/view?usp=sharing" target="_blank" rel="noopener noreferrer">Certificado de existencia y representación legal</a></p>
+</section>
+
+<section id="servicios">
+<h2>Qué hacemos</h2>
+<div class="cr-card cr-svc"><div>
+<h3>1. Producción de series y documentales patrimoniales</h3>
+<p>Creación de contenido audiovisual de alta calidad que rescata y visibiliza el patrimonio material e inmaterial, con un enfoque narrativo que conecta la identidad local con nuevas audiencias.</p>
+<p><b>Ejemplo emblemático:</b> Serie «Sazón y Fogón» (rescate del patrimonio gastronómico local para promover la identidad y el turismo).</p>
+
+<p><b>Entregables:</b> Serie o documental, versiones adaptadas para redes sociales y material de apoyo (making of, fotografías).</p>
+</div><div><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/sazon-afiche.png" alt="Producción de series y documentales patrimoniales" loading="lazy"/></div></div>
+<div class="cr-card cr-svc solo"><div>
+<h3>2. Talleres pedagógicos de expresión audiovisual</h3>
+<p>Programas de formación práctica diseñados para empoderar a niños, jóvenes y adultos (en contextos rurales y urbanos), utilizando el lenguaje audiovisual como una herramienta de expresión, reconocimiento identitario y transformación social.</p>
+
+<p><b>Diferencial:</b> No solo enseñamos técnica; facilitamos que la comunidad cuente su propia historia con sus propios medios.</p>
+<p><b>Entregables:</b> Ejecución del taller (presencial o híbrido), piezas audiovisuales creadas por los participantes e informe de impacto pedagógico o certificados de participación.</p>
+</div></div>
+<div class="cr-card cr-svc"><div>
+<h3>3. Investigación, digitalización y rescate de memoria audiovisual</h3>
+<p>Servicio especializado de recuperación de memoria histórica con enfoque ambiental y científico. Incluye restauración y limpieza de dispositivos, digitalización profesional, catalogación y análisis de material en formatos obsoletos (fotografías, filmes, cintas de video) para preservar su contenido y hacerlo accesible para la investigación futura.</p>
+
+<p><b>Diferencial:</b> Combinamos la preservación técnica con el análisis de contenido, convirtiendo archivos inertes en fuentes activas de conocimiento.</p>
+<p><b>Entregables:</b> Archivo digital organizado y respaldado, informe técnico de digitalización y/o un producto audiovisual curado (ej. un minidocumental o exposición virtual) a partir del material rescatado.</p>
+</div><div><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/archivo-filmico.png" alt="Investigación, digitalización y rescate de memoria audiovisual" loading="lazy"/><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/proyector.jpg" alt="" loading="lazy"/></div></div>
+</section>
+
+<section id="galeria">
+<h2>Galería</h2>
+<div class="cr-gallery">
+<div class="cr-gal cr-s4 cr-full"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/galeria-musicos.jpg" alt="Músicos con violín y guitarras bajo un árbol grande" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/galeria-bellotas.jpg" alt="Bellotas verdes sobre hojarasca" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/sazon-cocinera.jpg" alt="Cocinera con pañoleta rosada sostiene una bandeja de masa en bolitas" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/sazon-empanadas.jpg" alt="Empanadas fritas alrededor de un pocillo de barro con ají verde" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/galeria-paramo.jpg" alt="Laguna de páramo entre montañas y niebla" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/sazon-abuela.jpg" alt="Cocinera mayor con gafas sostiene una cuchara de palo en su cocina" loading="lazy"/></div>
+<div class="cr-gal cr-s2"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/galeria-flor.jpg" alt="Flor naranja de pétalos tubulares" loading="lazy"/></div>
+<div class="cr-gal cr-s2 cr-full"><img src="https://cdn.jsdelivr.net/gh/csicentraldeservicios-glitch/creactivos-blog-admin@5ae84f08127dc8b5e927e8679e2c335762041d82/public/img/galeria-rosa.jpg" alt="Rosa roja con gotas de lluvia entre la niebla" loading="lazy"/></div>
+</div>
+</section>
+</b:if>
+
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+<h2 id='noticias'>Noticias</h2>
+</b:if>
+
+<b:section class='main' id='main' showaddelement='yes'>
+<b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog'/>
+</b:section>
+
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+
+<section id="contacto">
+<h2>Contacto</h2>
+<ul style="list-style:none;padding:0">
+<li><b>E-mail:</b> <a href="mailto:creactivosaudiovisual@gmail.com">creactivosaudiovisual@gmail.com</a></li>
+<li><b>Cel:</b> <a href="tel:+573162582914">+57 316 258 2914</a> · <a href="https://wa.me/573162582914" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+<li><b>Facebook:</b> <a href="https://www.facebook.com/CreActivosAudiovisual" target="_blank" rel="noopener noreferrer">facebook.com/CreActivosAudiovisual</a></li>
+<li><b>YouTube:</b> <a href="https://www.youtube.com/@CreActivosAudiovisual" target="_blank" rel="noopener noreferrer">@CreActivosAudiovisual</a></li>
+
+</ul>
+<h3 style="margin-top:1em">Si quieres apoyar nuestros proyectos</h3>
+<p><a class="cr-btn" href="https://buymeacoffee.com/creactivos" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a><a class="cr-btn" href="https://www.patreon.com/CreActivos" target="_blank" rel="noopener noreferrer">Patreon</a></p>
+</section>
+</b:if>
+
+</main>
+
+<footer class='cr-foot'>
+<p>© Creactivos · Cine y formación ambiental</p>
+<p><a href="https://www.facebook.com/CreActivosAudiovisual" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://www.youtube.com/@CreActivosAudiovisual" target="_blank" rel="noopener noreferrer">YouTube</a> · <a href="mailto:creactivosaudiovisual@gmail.com">E-mail</a> · <a href="https://buymeacoffee.com/creactivos" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a> · <a href="https://www.patreon.com/CreActivos" target="_blank" rel="noopener noreferrer">Patreon</a></p>
+</footer>
+
+</div>
+</body>
+</html>

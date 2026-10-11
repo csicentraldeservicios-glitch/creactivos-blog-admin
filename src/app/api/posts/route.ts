@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { go } from "@/lib/http";
 import type { NextRequest } from "next/server";
 import { createPost, parsePostForm } from "@/lib/blogger";
 
@@ -6,12 +6,12 @@ export async function POST(request: NextRequest) {
   const form = await request.formData();
   const input = parsePostForm(form);
   if (!input.title) {
-    return NextResponse.redirect(new URL("/posts/new?error=title", request.url), { status: 303 });
+    return go("/posts/new?error=title");
   }
   try {
     const post = await createPost(input, form.get("intent") !== "publish");
-    return NextResponse.redirect(new URL(`/posts/${post.id}?saved=1`, request.url), { status: 303 });
+    return go(`/posts/${post.id}?saved=1`);
   } catch {
-    return NextResponse.redirect(new URL("/posts/new?error=api", request.url), { status: 303 });
+    return go("/posts/new?error=api");
   }
 }

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { isConnected } from "@/lib/blogger";
 
 const ERRORS: Record<string, string> = {
+  config:
+    "Faltan variables en el servidor: GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET y APP_URL. Agrégalas (ver el README, «Conectar Blogger») y vuelve a intentar.",
   "1": "La autorización no es válida. Inténtalo de nuevo.",
   norefresh: "Google no devolvió refresh token. Revoca el acceso en tu cuenta de Google y reconecta.",
   exchange: "No se pudo canjear el código de Google. Revisa Client ID/Secret y la redirect URI.",
@@ -28,7 +30,7 @@ export default async function ConnectPage({
       <a href="/api/blogger/connect" className="inline-block rounded bg-black px-4 py-2 text-white">
         Conectar con Google
       </a>
-      <p><Link href="/" className="text-sm underline">Volver</Link></p>
+      <p><Link href="/blogger" className="text-sm underline">Volver</Link></p>
     </main>
   );
 }
