@@ -32,13 +32,13 @@ function Hero({ c }: { c: SiteContent["portada"] }) {
         </div>
       </div>
       {tiles.length > 0 && (
-        <div className="grid h-[22rem] grid-cols-2 grid-rows-2 gap-2 sm:h-[28rem]">
+        <div className="grid grid-cols-2 gap-2 md:h-[28rem] md:grid-rows-2">
           {tiles.map((t, i) => {
             const inner = (
               <>
                 <Pic
                   src={t.imagen}
-                  alt={t.texto}
+                  alt={t.alt || t.texto}
                   priority
                   sizes="(min-width: 768px) 25vw, 50vw"
                   className="transition-transform duration-500 group-hover:scale-105"
@@ -50,7 +50,13 @@ function Hero({ c }: { c: SiteContent["portada"] }) {
                 )}
               </>
             );
-            const cls = `group relative overflow-hidden rounded-lg bg-zinc-900 ${i === 0 && tiles.length > 1 ? "row-span-2" : ""}`;
+            // En pantallas grandes: la primera foto alta a la izquierda y las otras dos a la derecha.
+            // En el celular, con tres fotos, la del medio va arriba a todo el ancho para que no se recorte.
+            const three = tiles.length === 3;
+            const wide = three && i === 1;
+            const cls = `group relative overflow-hidden rounded-lg bg-zinc-900 md:aspect-auto ${
+              i === 0 && tiles.length > 1 ? "md:row-span-2" : ""
+            } ${wide ? "order-first col-span-2 aspect-[577/437] md:order-none md:col-span-1" : "aspect-square"}`;
             return t.enlace ? (
               <A key={i} href={t.enlace} className={cls}>
                 {inner}

@@ -14,9 +14,14 @@ export const DEFAULT_CONTENT: SiteContent = {
     boton2Texto: "Ver Sazón y Fogón",
     boton2Enlace: "/sazon-y-fogon",
     tiles: [
-      { imagen: "/img/portada-palma.jpg", texto: "Minas de Salento", enlace: "/minas-de-salento" },
-      { imagen: "/img/proyector.jpg", texto: "Memoria audiovisual", enlace: "/#quienes-somos" },
-      { imagen: "/img/sazon-logo.jpg", texto: "Sazón y Fogón", enlace: "/sazon-y-fogon" },
+      { imagen: "/img/portada-palma.jpg", texto: "Minas de Salento", alt: "Cielo estrellado y palma de cera sobre las montañas de Salento", enlace: "/minas-de-salento" },
+      {
+        imagen: "/img/memoria-audiovisual.jpg",
+        texto: "",
+        alt: "Archivos y memoria: una persona camina por una montaña, con los logos de la Secretaría de Cultura del Valle del Cauca, Mincultura y el Servicio Geológico Colombiano",
+        enlace: "/#quienes-somos",
+      },
+      { imagen: "/img/sazon-logo.jpg", texto: "Sazón y Fogón", alt: "Logo de la serie Sazón y Fogón", enlace: "/sazon-y-fogon" },
     ],
   },
   quienes: {

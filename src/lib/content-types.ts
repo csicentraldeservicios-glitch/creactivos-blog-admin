@@ -15,7 +15,7 @@ export interface SiteContent {
     boton1Enlace: string;
     boton2Texto: string;
     boton2Enlace: string;
-    tiles: { imagen: string; texto: string; enlace: string }[];
+    tiles: { imagen: string; texto: string; alt: string; enlace: string }[];
   };
   quienes: {
     ejes: string[];

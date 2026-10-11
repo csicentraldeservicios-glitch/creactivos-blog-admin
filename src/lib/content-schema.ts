@@ -57,10 +57,11 @@ export const EDITORS: EditorDef[] = [
       { type: "url", key: "boton2Enlace", label: "Botón con borde: a dónde lleva", placeholder: "/sazon-y-fogon" },
       {
         type: "list", key: "tiles", label: "Fotos de la portada", help: "La primera es la alta de la izquierda; las otras dos van a la derecha.",
-        itemLabel: "Foto", addLabel: "Añadir foto", titleKey: "texto", fixed: true, max: 3,
+        itemLabel: "Foto", addLabel: "Añadir foto", titleKey: "alt", fixed: true, max: 3,
         fields: [
           { type: "image", key: "imagen", label: "Foto" },
-          { type: "text", key: "texto", label: "Título sobre la foto", max: 60 },
+          { type: "text", key: "texto", label: "Título sobre la foto", help: "Déjalo vacío si la foto ya trae su propio texto o logos.", max: 60 },
+          { type: "text", key: "alt", label: "Descripción de la foto", help: "Se lee en voz alta para personas con discapacidad visual y aparece si la foto no carga.", max: 200 },
           { type: "url", key: "enlace", label: "A dónde lleva al pulsarla", placeholder: "/sazon-y-fogon" },
         ],
       },
